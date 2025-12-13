@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AB Green Tech - Expert Rainwater Harvesting and Water Conservation Solutions in Ludhiana. Sustainable water management for homes and industries.">
+    <title>AB Green Tech | Rainwater Harvesting Ludhiana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920&auto=format&fit=crop">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <style>
+        :root {
+            --primary: #ff5733;
+            --primary-dark: #e64a2e;
+            --text-dark: #333;
+            --text-light: #fff;
+            --text-grey: #666;
+            --bg-light: #f8f9fa;
+            --pink: #e91e63;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            padding-top: 76px;
+        }
+
+        /* Utility */
+        .text-primary-custom { color: var(--primary) !important; }
+        .section-padding { padding: 80px 0; }
+        .section-title { margin-bottom: 50px; font-weight: 700; position: relative; display: inline-block; text-transform: uppercase; letter-spacing: 1px; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto 0; }
+
+        /* Navbar */
+        .navbar { background-color: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); padding: 10px 0; }
+        .navbar-brand { font-weight: 700; color: var(--primary); line-height: 1.2; font-size: 1.2rem; white-space: normal; max-width: 80%; }
+        @media (min-width: 992px) { .navbar-brand { font-size: 1.6rem; white-space: nowrap; max-width: 100%; } }
+        .nav-link { font-weight: 500; color: var(--text-dark); padding: 10px 15px !important; transition: 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--primary); }
+        .navbar-toggler { border: none; padding: 0; font-size: 1.5rem; }
+        .navbar-toggler:focus { box-shadow: none; }
+        .offcanvas-title { color: var(--primary); font-weight: 700; }
+
+        /* Hero (LCP Optimized) */
+        .hero-section {
+            height: 60vh;
+            min-height: 450px;
+            background-color: #1a1a1a;
+            /* Industrial/Water Theme Background */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 15px;
+            content-visibility: auto;
+        }
+        .hero-title { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; margin-bottom: 15px; }
+        .hero-subtitle { font-size: clamp(1rem, 3vw, 1.3rem); margin-bottom: 30px; font-weight: 300; }
+
+        /* Reveal Animation */
+        .reveal-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; will-change: opacity, transform; }
+        .reveal-section.visible { opacity: 1; transform: translateY(0); }
+
+        /* Buttons */
+        .btn-custom { padding: 12px 30px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; margin: 8px; border: 2px solid var(--primary); transition: all 0.3s ease; }
+        .btn-filled { background-color: var(--primary); color: white; }
+        .btn-filled:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); transform: translateY(-3px); color: white; }
+        .btn-outline { background-color: transparent; color: white; border-color: white; }
+        .btn-outline:hover { background-color: white; color: var(--primary); transform: translateY(-3px); }
+        
+        .btn-gradient { background: linear-gradient(45deg, var(--primary), #ff8c6b); color: white; border: none; padding: 10px; width: 100%; font-weight: 600; border-radius: 0 0 15px 15px; display: block; text-align: center; text-decoration: none; transition: 0.3s; }
+        .btn-gradient:hover { opacity: 0.9; color: white; }
+
+        /* Components */
+        .service-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: 0.3s; height: 100%; background: #fff; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); }
+        .service-img { height: 220px; object-fit: cover; width: 100%; border-bottom: 3px solid var(--primary); }
+        .card-body { padding: 1.5rem; }
+        .price-tag { color: var(--primary); font-weight: 700; font-size: 1.2rem; display: block; margin: 10px 0; }
+
+        .amenity-box { text-align: center; padding: 25px; background: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); transition: 0.3s; height: 100%; border-bottom: 3px solid transparent; }
+        .amenity-box:hover { transform: translateY(-5px); border-bottom-color: var(--primary); }
+        .amenity-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+
+        .gallery-item { position: relative; overflow: hidden; border-radius: 10px; height: 250px; cursor: pointer; width: 100%; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.3s; color: white; font-size: 2rem; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        .testimonial-card { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); text-align: center; margin: 10px; height: 100%; }
+        .t-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid var(--primary); }
+
+        .testimonial-carousel-btn { width: 50px; height: 50px; background: var(--primary); border-radius: 50%; opacity: 1; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(255, 87, 51, 0.3); transition: all 0.3s ease; z-index: 5; border: none; }
+        .testimonial-carousel-btn:hover { background: var(--primary-dark); transform: translateY(-50%) scale(1.15); box-shadow: 0 8px 20px rgba(255, 87, 51, 0.5); opacity: 1; }
+        .testimonial-carousel-btn i { color: white; font-size: 1.2rem; }
+        .carousel-control-prev.testimonial-carousel-btn { left: -20px; }
+        .carousel-control-next.testimonial-carousel-btn { right: -20px; }
+
+        .accordion-button:not(.collapsed) { color: var(--primary); background-color: rgba(255, 87, 51, 0.1); }
+        .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(255, 87, 51, 0.25); border-color: var(--primary); }
+
+        .map-container { width: 100%; height: 350px; background: #eee; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        .nap-section { background: #fff; padding: 60px 0; }
+        .nap-item { display: flex; align-items: center; margin-bottom: 30px; }
+        .nap-icon-wrapper { flex-shrink: 0; width: 60px; height: 60px; background-color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; color: #fff; font-size: 24px; }
+        .nap-content h5 { font-weight: 700; margin-bottom: 5px; font-size: 1.1rem; }
+        .nap-content p, .nap-content a { margin: 0; color: var(--text-grey); text-decoration: none; font-size: 1rem; }
+        .highlight-phone { color: var(--pink) !important; font-weight: 700; }
+
+        .site-footer { background-color: #f1f1f1; color: var(--text-dark); padding: 20px 0; font-size: 0.9rem; }
+
+        /* Animations */
+        @keyframes radiation { 0% { box-shadow: 0 0 0 0 rgba(255, 87, 51, 0.7); transform: scale(1); } 70% { box-shadow: 0 0 0 15px rgba(255, 87, 51, 0); transform: scale(1.05); } 100% { box-shadow: 0 0 0 0 rgba(255, 87, 51, 0); transform: scale(1); } }
+        @keyframes radiation-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); transform: scale(1.05); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); } }
+
+        .float-btn { position: fixed; bottom: 25px; width: 60px; height: 60px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; z-index: 9999; text-decoration: none; }
+        .float-btn:hover { color: #fff; }
+        .float-wa { background-color: #25D366; right: 20px; animation: radiation-green 2s infinite; }
+        .float-call { background-color: var(--primary); left: 20px; display: none; animation: radiation 2s infinite; }
+
+        /* Responsive Tweaks */
+        @media (max-width: 992px) { .testimonial-carousel-btn { width: 40px; height: 40px; background: rgba(255, 87, 51, 0.9); } .testimonial-carousel-btn i { font-size: 1rem; } .carousel-control-prev.testimonial-carousel-btn { left: 0; } .carousel-control-next.testimonial-carousel-btn { right: 0; } }
+        @media (max-width: 768px) { .float-call { display: flex; } .section-padding { padding: 50px 0; } }
+        @media (max-width: 576px) { .hero-title { font-size: 2rem; } .hero-btn-container { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; } .hero-btn-container .btn-custom { width: 100%; text-align: center; } .nap-item { flex-direction: row; } }
+        @media (max-width: 350px) { .nap-icon-wrapper { width: 50px; height: 50px; font-size: 20px; margin-right: 10px; } }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#offcanvasNavbar" data-bs-offset="80">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" aria-label="Home"><i class="fas fa-water me-2"></i>AB Green Tech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">AB Green Tech</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#amenities">Why Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="hero-title">Rainwater Harvesting Experts in Ludhiana</h1>
+                    <p class="hero-subtitle">End-to-End Water Conservation Solutions for Residential & Industrial Needs.</p>
+                    <div class="d-flex justify-content-center flex-wrap mt-4 hero-btn-container">
+                        <a href="tel:+919876543210" class="btn-custom btn-filled"><i class="fas fa-phone-alt me-2"></i> Call Now</a>
+                        <a href="https://wa.me/919876543210" class="btn-custom btn-outline" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp me-2"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section-padding reveal-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=800&auto=format&fit=crop" 
+                         alt="Rainwater Harvesting Pipes" class="img-fluid about-img" width="800" height="600" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">About AB Green Tech</h2>
+                    <p class="lead text-primary-custom fw-bold">Pioneering Water Conservation</p>
+                    <p class="mb-4">AB Green Tech is a Ludhiana-based company dedicated to sustainable water management. We provide comprehensive services ranging from system planning and design to installation and maintenance. Our goal is to help you save water, reduce dependency on groundwater, and adopt eco-friendly practices using modern technology.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-custom me-2"></i> Custom Design & Planning</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-custom me-2"></i> Residential & Industrial Projects</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary-custom me-2"></i> Maintenance & Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-light reveal-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+                <p>Advanced systems to capture, filter, and reuse water.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=500" class="card-img-top service-img" 
+                             alt="Rooftop Harvesting" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Harvesting System</h5>
+                            <p class="card-text text-muted">Efficiently capture rain from roof surfaces and channel it to storage or recharge pits.</p>
+                            <span class="price-tag">Residential</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=500" class="card-img-top service-img" 
+                             alt="Groundwater Recharge" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Harvesting Projects</h5>
+                            <p class="card-text text-muted">Replenish the water table using advanced filtration and recharge wells.</p>
+                            <span class="price-tag">Industrial</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Harvesting Service Provider</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Harvest Rainwater From Roof</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Tank For Storage</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rcc Ring</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Manhole Cover</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Cleaning Service</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Cleaning Service</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="section-padding bg-light reveal-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Products</h2>
+                <p>Advanced systems to capture, filter, and reuse water.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=500" class="card-img-top service-img" 
+                             alt="Rooftop Harvesting" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Harvesting System</h5>
+                            <p class="card-text text-muted">Efficiently capture rain from roof surfaces and channel it to storage or recharge pits.</p>
+                            <span class="price-tag">Residential</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=500" class="card-img-top service-img" 
+                             alt="Groundwater Recharge" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Harvesting Projects</h5>
+                            <p class="card-text text-muted">Replenish the water table using advanced filtration and recharge wells.</p>
+                            <span class="price-tag">Industrial</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Harvesting Service Provider</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Harvest Rainwater From Roof</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Tank For Storage</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rcc Ring</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Manhole Cover</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Cleaning Service</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card service-card">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=500" class="card-img-top service-img" 
+                             alt="Filtration & Maintenance" width="500" height="220" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Rain Water Cleaning Service</h5>
+                            <p class="card-text text-muted">Installation of high-quality filters and annual maintenance contracts.</p>
+                            <span class="price-tag">Service</span>
+                        </div>
+                        <a href="#contact" class="btn-gradient">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="section-padding reveal-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p>We deliver reliability and sustainability.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col"><div class="amenity-box"><i class="fas fa-hand-holding-dollar amenity-icon"></i><h5>Cost Effective</h5><p class="small text-muted mb-0">Reduce water bills.</p></div></div>
+                <div class="col"><div class="amenity-box"><i class="fas fa-leaf amenity-icon"></i><h5>Eco-Friendly</h5><p class="small text-muted mb-0">Sustainable practices.</p></div></div>
+                <div class="col"><div class="amenity-box"><i class="fas fa-tools amenity-icon"></i><h5>Modern Tech</h5><p class="small text-muted mb-0">Advanced filtration.</p></div></div>
+                <div class="col"><div class="amenity-box"><i class="fas fa-users-cog amenity-icon"></i><h5>Expert Team</h5><p class="small text-muted mb-0">Professional installation.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding bg-light reveal-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Project Gallery</h2>
+                <p>Our recent installations and projects.</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/336193062/QH/NX/CE/8420886/boring-for-water-harvesting-system-500x500.jpeg" alt="Piping System" width="500" height="250" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2023/8/335947825/WI/BP/RH/8420886/product-jpeg-500x500.jpg" alt="Water Tank" width="500" height="250" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/349965083/QO/BB/HZ/8420886/rain-water-collection-system-500x500.jpeg" alt="Installation Work" width="500" height="250" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/350193928/GB/HB/QN/8420886/harvest-rainwater-from-roof-system-500x500.jpeg" alt="Filter Unit" width="500" height="250" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/350191902/VW/BT/KY/8420886/rwh-consultant-service-500x500.jpeg" alt="Rainwater Flow" width="500" height="250" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/350297197/WQ/NA/VB/8420886/rain-water-injection-well-500x500.jpeg" alt="Garden Irrigation" width="500" height="250" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding reveal-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Client Reviews</h2>
+            </div>
+            
+            <div class="position-relative px-lg-4">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                                    <div class="testimonial-card">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar" class="t-img" width="70" height="70" loading="lazy">
+                                        <h5 class="fw-bold">Rajesh Kumar</h5>
+                                        <p class="text-muted small">Industrial Owner</p>
+                                        <p class="fst-italic">"AB Green Tech installed a large-scale system for our factory. Excellent service and significant water savings."</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 d-none d-md-block mb-3">
+                                    <div class="testimonial-card">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sneha Gupta" class="t-img" width="70" height="70" loading="lazy">
+                                        <h5 class="fw-bold">Sneha Gupta</h5>
+                                        <p class="text-muted small">Homeowner</p>
+                                        <p class="fst-italic">"Very professional team. The rooftop filter they installed is compact and works perfectly during heavy rains."</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block mb-3">
+                                    <div class="testimonial-card">
+                                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Amit Desai" class="t-img" width="70" height="70" loading="lazy">
+                                        <h5 class="fw-bold">Amit Desai</h5>
+                                        <p class="text-muted small">Architect</p>
+                                        <p class="fst-italic">"I recommend AB Green Tech for all my construction projects. Their designs are compliant and efficient."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev testimonial-carousel-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-control-next testimonial-carousel-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding bg-light reveal-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">FAQ</h2>
+                <p>Answers to your common queries.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What is rainwater harvesting?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">It is the technique of collecting and storing rainwater for future use or recharging it into the ground to improve water tables.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How much does installation cost?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">The cost depends on the size of your property and the type of system (storage vs recharge). Contact us for a free site assessment and quote.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Do you provide maintenance?</button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, we offer annual maintenance contracts (AMC) to clean filters and tanks, ensuring your system runs efficiently year-round.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Is it mandatory in Ludhiana?</button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">For many new residential and commercial constructions, rainwater harvesting is mandatory by local authorities to conserve groundwater.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-container reveal-section">
+        <iframe title="Ludhiana Map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d219104.85983086875!2d75.71658808127393!3d30.900269737690366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681102348ec60610!2sLudhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="contact" class="nap-section reveal-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4"><div class="nap-item"><div class="nap-icon-wrapper"><i class="fas fa-building"></i></div><div class="nap-content"><h5>Business Name</h5><p>AB Green Tech</p></div></div></div>
+                <div class="col-md-6 mb-4"><div class="nap-item"><div class="nap-icon-wrapper"><i class="fas fa-phone-alt"></i></div><div class="nap-content"><h5>Phone Number</h5><a href="tel:+919876543210" class="highlight-phone">+91 98765 43210</a></div></div></div>
+                <div class="col-md-6 mb-4"><div class="nap-item"><div class="nap-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div><div class="nap-content"><h5>Address</h5><p>Industrial Area A, Ludhiana, Punjab</p></div></div></div>
+                <div class="col-md-6 mb-4"><div class="nap-item"><div class="nap-icon-wrapper"><i class="fas fa-envelope"></i></div><div class="nap-content"><h5>Email</h5><a href="mailto:info@abgreentech.com">info@abgreentech.com</a></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer text-center">
+        <div class="container">
+            <p class="mb-0">© 2023 AB Green Tech. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="tel:+919876543210" class="float-btn float-call" aria-label="Call Now"><i class="fas fa-phone-alt"></i></a>
+    <a href="https://wa.me/919876543210" class="float-btn float-wa" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body p-0 text-center"><img src="" class="img-fluid rounded" id="galleryModalImage" alt="Gallery Fullscreen"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Intersection Observer for Reveal Animation & Lazy Map Loading
+        document.addEventListener("DOMContentLoaded", function () {
+            const revealElements = document.querySelectorAll(".reveal-section");
+            const mapIframe = document.querySelector(".map-container iframe");
+
+            const revealCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+
+                        // Lazy Load Map Logic (Assign src only when near viewport)
+                        if (entry.target.classList.contains("map-container") && mapIframe.dataset.src) {
+                            mapIframe.src = mapIframe.dataset.src;
+                            mapIframe.removeAttribute("data-src");
+                        }
+                        observer.unobserve(entry.target); // Stop observing once revealed
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(revealCallback, { 
+                root: null, 
+                threshold: 0.1, 
+                rootMargin: "50px" 
+            });
+
+            revealElements.forEach(el => observer.observe(el));
+        });
+
+        // Lightbox Logic
+        function openLightbox(element) {
+            document.getElementById('galleryModalImage').src = element.querySelector('img').src;
+            new bootstrap.Modal(document.getElementById('galleryModal')).show();
+        }
+
+        // Close Offcanvas on Link Click (Mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 992) {
+                    const bsOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+                    if (bsOffcanvas) bsOffcanvas.hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
